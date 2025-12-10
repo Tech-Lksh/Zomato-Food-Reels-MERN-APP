@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Home, Bookmark, Heart, MessageCircle } from "lucide-react";
 import BottomNavBar from "./BottomNavBar";
+import Navbar from "./Navbar";
 
 export default function HomeReels() {
   const [videos, setVideos] = useState([]);
@@ -113,6 +114,8 @@ export default function HomeReels() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="w-full h-screen flex flex-col bg-black">
       {/* Scroll Section */}
       <div className="flex-1 overflow-y-scroll snap-y snap-mandatory">
@@ -194,5 +197,6 @@ export default function HomeReels() {
 
       <BottomNavBar />
     </div>
+    </>
   );
 }
